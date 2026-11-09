@@ -1,4 +1,4 @@
-const CACHE='paisapilot-v034-release1';
+const CACHE='paisapilot-v035a-health-flag-credit';
 const APP_CACHES_PREFIX='paisapilot-';
 const ASSETS=['./','./index.html','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting())));
