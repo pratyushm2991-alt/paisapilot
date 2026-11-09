@@ -1,4 +1,4 @@
-# PaisaPilot v0.3.1
+# PaisaPilot v0.3.2
 
 A local-first, zero-cloud-cost PWA for Android/Chrome.
 
@@ -48,9 +48,16 @@ Then open `http://localhost:8000`.
 Important: A ZIP opened directly from Files is not a reliably installable PWA; serve it over HTTPS or localhost. Each browser/site origin has separate storage. The app does not connect to banks, verify salary deposits, or encrypt IndexedDB at rest.
 
 
-## v0.3.1 validation patch
+## v0.3.2 validation patch
 - Restore now overwrites the single IndexedDB state record transactionally instead of clearing the object store first.
 - Service-worker activation only removes older PaisaPilot-prefixed caches; unrelated site caches are preserved.
 - Added 192px and 512px PNG app icons for Android installability checks.
 
 This is a hardening patch, not a substitute for testing on the target Android device. Create an encrypted backup before upgrading any existing installation.
+
+
+## v0.3.2 dashboard reporting
+- Dashboard defaults to the current month.
+- Added period selector for week, month, quarter, year, and all-time views.
+- Date anchor lets you inspect earlier or later reporting periods.
+- Transaction records and existing IndexedDB data format remain unchanged.
